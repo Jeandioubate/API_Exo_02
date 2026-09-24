@@ -66,3 +66,11 @@ for city in cities: # On parcourt chaque ville de la liste "cities".
     print("================================")
     print(city)                                 # Affichage du nom de la ville actuelle
     print("================================")
+
+    for date in dates:  # On parcourt chacune des cinq dates
+
+        temperatures_min = []  # On crée une liste qui va contenir toutes les températures
+                               # min trouvées pour la date actuelle
+
+        temperatures_max = []  # On crée une liste qui va contenir toutes les températures
+                               # max trouvées pour la date actuelle
