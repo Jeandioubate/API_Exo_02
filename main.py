@@ -57,3 +57,12 @@ city_dict = {
 
 # Liste des villes que nous voulons traiter.
 cities = ["Mérignac", "Saint-Geours-de-Maremne", "Toulouse"]
+
+for city in cities: # On parcourt chaque ville de la liste "cities".
+
+    data = city_dict[city] # On récupère les données météo correspondantes à la ville actuelle.
+                           # Par ex, si city vaut "Toulouse", data contient les données de data_tls
+
+    print("================================")
+    print(city)                                 # Affichage du nom de la ville actuelle
+    print("================================")
