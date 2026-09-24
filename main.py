@@ -74,3 +74,26 @@ for city in cities: # On parcourt chaque ville de la liste "cities".
 
         temperatures_max = []  # On crée une liste qui va contenir toutes les températures
                                # max trouvées pour la date actuelle
+
+        for forecast in data["list"]:  # On parcourt toutes les prévisions météo présentes dans data["list"]
+            # L'API fournit plusieurs prévisions pour une même journée, toutes les 3h.
+
+            if forecast["dt_txt"].startswith(date):  # On vérifie si la prévision correspond à la date actuelle
+
+                # Affichage de chaque prévision avec heure, temp min et max
+                """
+                print(
+                    forecast["dt_txt"],
+                    "Min :", forecast["main"]["temp_min"],
+                    "Max :", forecast["main"]["temp_max"]
+                )
+                """
+                # On ajoute la temp min de cette prévision dans la liste temperatures_min
+                temperatures_min.append(
+                    forecast["main"]["temp_min"]
+                )
+
+                # On ajoute la temp max de cette prévision dans la liste temperatures_max
+                temperatures_max.append(
+                    forecast["main"]["temp_max"]
+                )
