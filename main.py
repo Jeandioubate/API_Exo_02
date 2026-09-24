@@ -97,3 +97,13 @@ for city in cities: # On parcourt chaque ville de la liste "cities".
                 temperatures_max.append(
                     forecast["main"]["temp_max"]
                 )
+
+        # Affichage de la date actuelle ainsi que :
+        # - la plus petite température min trouvée
+        # - la plus grande température max trouvée
+        print(
+            date,
+            "Min :", min(temperatures_min),
+            "Max :", max(temperatures_max)
+        )
+
